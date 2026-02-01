@@ -27,7 +27,7 @@ common --enable_bzlmod
 # versions of Bazel may expect different syntax. Bazel also implicitly requires
 # some modules, and different versions have different dependencies, which
 # also affects the contents of the lock file.
-common --lockfile_mode=error
+common --lockfile_mode=update
 
 # Load any settings specific to the current user.
 # .bazelrc.user should appear in .gitignore so that settings are not shared with team members
