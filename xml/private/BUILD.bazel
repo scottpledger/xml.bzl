@@ -26,3 +26,10 @@ bzl_library(
     visibility = ["//xml:__subpackages__"],
     deps = [":dom"],
 )
+
+bzl_library(
+    name = "builder",
+    srcs = ["builder.bzl"],
+    visibility = ["//xml:__subpackages__"],
+    deps = [":parser"],
+)

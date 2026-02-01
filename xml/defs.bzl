@@ -1,5 +1,14 @@
-"Public API for xml_tools - XML parsing utilities for Starlark/Bazel"
+"Public API for xml_tools - XML parsing and building utilities for Starlark/Bazel"
 
+load(
+    "//xml/private:builder.bzl",
+    _cdata = "cdata",
+    _comment = "comment",
+    _document = "document",
+    _element = "element",
+    _processing_instruction = "processing_instruction",
+    _text = "text",
+)
 load(
     "//xml/private:dom.bzl",
     _count_child_elements = "count_child_elements",
@@ -98,4 +107,12 @@ xml = struct(
     count_child_elements = _count_child_elements,
     walk = _walk,
     to_string = _to_string,
+
+    # Builder functions (for constructing XML programmatically)
+    element = _element,
+    text = _text,
+    comment = _comment,
+    cdata = _cdata,
+    document = _document,
+    processing_instruction = _processing_instruction,
 )

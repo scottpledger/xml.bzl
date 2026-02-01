@@ -1,3 +1,4 @@
+load(":builder_test.bzl", "builder_test_suite")
 load(":content_test.bzl", "content_test_suite")
 load(":element_access_test.bzl", "element_access_test_suite")
 load(":navigation_test.bzl", "navigation_test_suite")
@@ -19,3 +20,5 @@ search_test_suite(name = "search_test")
 content_test_suite(name = "content_test")
 
 serialization_test_suite(name = "serialization_test")
+
+builder_test_suite(name = "builder_test")
